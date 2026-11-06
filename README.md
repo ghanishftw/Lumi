@@ -16,6 +16,15 @@ Lumi is a native Android app (Kotlin, Jetpack Compose, **Material 3 Expressive**
 
 Alternatively, push this folder to a GitHub repo. The included workflow (`.github/workflows/build.yml`) builds a debug APK, which you can download from the run's *Artifacts*.
 
+## Releases
+Push a tag like `v1.2.0` and `.github/workflows/release.yml` builds a signed release APK and publishes it on the Releases page with a SHA-256 checksum:
+
+```
+git tag -a v1.2.0 -m "Lumi 1.2.0" && git push origin v1.2.0
+```
+
+The signing key comes from the repo secrets `LUMI_KEYSTORE_BASE64`, `LUMI_KEYSTORE_PASSWORD`, `LUMI_KEY_ALIAS` and `LUMI_KEY_PASSWORD`.
+
 ## First run
 - Open **Settings › Cloud providers**, tap **DeepSeek** or **OpenCode Go**, paste your key and press **Fetch models**.
 - Or open **Settings › On-device models** and download *Gemma 4 E2B* (2.6 GB, needs about 8 GB RAM). Gated models need a Hugging Face token.
