@@ -27,12 +27,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialExpressiveTheme
-import androidx.compose.material3.MaterialShapes
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MotionScheme
 import androidx.compose.material3.Shapes
@@ -45,7 +42,6 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.expressiveLightColorScheme
-import androidx.compose.material3.toShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
@@ -58,6 +54,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
+import app.lumi.R
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -94,13 +92,13 @@ fun LumiTheme(mode: Int, dynamic: Boolean, content: @Composable () -> Unit) {
     MaterialExpressiveTheme(colorScheme = scheme, motionScheme = MotionScheme.expressive(), shapes = LumiShapes, content = content)
 }
 
-/** Lumi's mark: a slowly-breathing 9-sided cookie (Material 3 Expressive shape) with a sparkle. */
+/** Lumi's mark (the same speech bubble as the launcher icon) in a plain circle. */
 @Composable
 fun Avatar(size: Dp = 28.dp, modifier: Modifier = Modifier) {
     Box(
-        modifier.size(size).clip(MaterialShapes.Cookie9Sided.toShape()).background(MaterialTheme.colorScheme.primaryContainer),
+        modifier.size(size).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer),
         contentAlignment = Alignment.Center,
-    ) { Icon(Icons.Rounded.AutoAwesome, null, Modifier.size(size * 0.55f), tint = MaterialTheme.colorScheme.onPrimaryContainer) }
+    ) { Icon(painterResource(R.drawable.ic_lumi), null, Modifier.size(size * 0.72f), tint = MaterialTheme.colorScheme.onPrimaryContainer) }
 }
 
 /** Rounded pill, tonal when selected. No outlines anywhere. */

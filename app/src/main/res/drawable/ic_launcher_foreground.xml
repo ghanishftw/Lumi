@@ -1,8 +1,7 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="@color/icon_fg"
-        android:pathData="M54,30 Q57,51 78,54 Q57,57 54,78 Q51,57 30,54 Q51,51 54,30 Z" />
-    <path android:fillColor="@color/icon_fg"
-        android:pathData="M72,30 Q73,35 78,36 Q73,37 72,42 Q71,37 66,36 Q71,35 72,30 Z" />
+    <!-- Lumi: a round speech bubble with an eye. -->
+    <path android:fillColor="@color/icon_fg" android:fillType="evenOdd"
+        android:pathData="M32.00,52.00A22,22 0 1 1 42.34,70.66Q37,76 30,80Q32,67 32.00,52.00ZM55,46a6,6 0 1 0 12,0a6,6 0 1 0 -12,0Z" />
 </vector>

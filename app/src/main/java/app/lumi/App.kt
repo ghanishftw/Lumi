@@ -95,7 +95,7 @@ class ReminderReceiver : BroadcastReceiver() {
         val open = PendingIntent.getActivity(c, 0, Intent(c, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE)
         nm.notify(
             (now() % Int.MAX_VALUE).toInt(),
-            Notification.Builder(c, "remind").setSmallIcon(R.drawable.ic_stat).setContentTitle("Reminder")
+            Notification.Builder(c, "remind").setSmallIcon(R.drawable.ic_lumi).setContentTitle("Reminder")
                 .setContentText(i.getStringExtra("text")).setStyle(Notification.BigTextStyle().bigText(i.getStringExtra("text")))
                 .setContentIntent(open).setAutoCancel(true).build(),
         )
