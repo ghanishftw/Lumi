@@ -1,0 +1,5 @@
+<resources>
+    <color name="splash">#FFFDF7FF</color>
+    <color name="icon_bg">#FFE9DDFF</color>
+    <color name="icon_fg">#FF5B3FA8</color>
+</resources>
