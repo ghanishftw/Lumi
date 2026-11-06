@@ -11,7 +11,7 @@ Lumi is a native Android app (Kotlin, Jetpack Compose, **Material 3 Expressive**
 - **Personalization:** "About you", response style, memory, dynamic color, and light, dark or system theme.
 
 ## Build
-1. Install the latest **Android Studio**, open this folder, and let Gradle sync. It downloads AGP 9.0.1, Gradle 9.2.1 and Android SDK 37.
+1. Install the latest **Android Studio**, open this folder, and let Gradle sync. It downloads AGP 9.1.1, Gradle 9.3.1 and Android SDK 37.
 2. Press **Run** with your phone plugged in (USB debugging on). The phone needs Android 12 or newer.
 
 Alternatively, push this folder to a GitHub repo. The included workflow (`.github/workflows/build.yml`) builds a debug APK, which you can download from the run's *Artifacts*.
